@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <script type="module" src="/src/mapObject.ts"></script>
+    <script type="module">
+      import mapObject from './src/mapObject';
+
+      const source = { id: 1, name: 'John', age: 25 };
+      const excludedProperties = ['age', 'name', 'id'];
+      const result = mapObject({
+        sourceObject: source,
+        mapConfiguration: {
+          userId: 'id',
+          userName: 'name',
+          isAdult: (src) => src.age >= 18,
+        },
+        options: { excludedProperties },
+      });
+
+      const resultEl = document.getElementById('result');
+      resultEl.innerText = JSON.stringify(result);
+    </script>
+
+    <p>Result<span id="result"></span></p>
+  </body>
+</html>
