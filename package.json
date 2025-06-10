@@ -24,6 +24,7 @@
   ],
   "main": "./dist/map-object-ts.umd.cjs",
   "module": "./dist/map-object-ts.js",
+  "types": "./dist/map-object-ts.d.ts",
   "exports": {
     ".": {
       "import": "./dist/map-object-ts.js",
