@@ -1,6 +1,6 @@
 {
   "name": "map-object-ts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Typescript typesafe object mapper",
   "author": "aporovic",
   "license": "MIT",
@@ -22,9 +22,8 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/map-object-ts.umd.cjs",
   "module": "./dist/map-object-ts.js",
-  "types": "./dist/map-object-ts.d.ts",
+  "types": "./dist/mapObject.d.ts",
   "exports": {
     ".": {
       "import": "./dist/map-object-ts.js",
