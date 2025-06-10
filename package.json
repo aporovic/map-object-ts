@@ -1,6 +1,6 @@
 {
   "name": "map-object-ts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Typescript typesafe object mapper",
   "author": "aporovic",
   "license": "MIT",
@@ -27,8 +27,9 @@
   "types": "./dist/mapObject.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/mapObject.d.ts",
       "import": "./dist/map-object-ts.js",
-      "require": "./dist/map-object-ts.umd.cjs"
+      "require": "./dist/map-object-ts.cjs"
     }
   },
   "scripts": {
@@ -46,5 +47,8 @@
     "vite": "^6.3.5",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.3"
+  },
+  "dependencies": {
+    "map-object-ts": "^0.0.4"
   }
 }
